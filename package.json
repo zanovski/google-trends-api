@@ -1,6 +1,6 @@
 {
-  "name": "google-trends-api",
-  "version": "4.3.0",
+  "name": "tech-radar-google-trends",
+  "version": "4.3.2",
   "description": "an API layer on top of google trends",
   "main": "lib/google-trends-api.min.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "preversion": "npm run build",
     "lint:eslint": "eslint src, test",
     "lint:staged": "lint-staged",
-    "preinstall": "webpack --mode=build"
+    "prepublish": "npm run build"
   },
   "lint-staged": {
     "*.js": "lint:eslint"
@@ -23,7 +23,7 @@
   "pre-commit": "lint:staged",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pat310/google-trends-api.git"
+    "url": "git+https://github.com/zanovski/google-trends-api.git"
   },
   "keywords": [
     "google",
@@ -36,9 +36,8 @@
   "author": "Patrick Trasborg <patrick.trasborg@gmail.com> (http://trasb.org)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pat310/google-trends-api/issues"
+    "url": "https://github.com/zanovski/google-trends-api/issues"
   },
-  "homepage": "https://github.com/pat310/google-trends-api#readme",
   "dependencies": {},
   "devDependencies": {
     "babel": "6.3.13",
