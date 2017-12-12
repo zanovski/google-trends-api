@@ -31,7 +31,7 @@ testFile.js
 allCategories.txt
 
 test
-src
+
 webpack.config.js
 .travis.yml
 .codeclimate.yml

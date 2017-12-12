@@ -14,7 +14,8 @@
     "coverage": "nyc mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
     "preversion": "npm run build",
     "lint:eslint": "eslint src, test",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "preinstall": "webpack --mode=build"
   },
   "lint-staged": {
     "*.js": "lint:eslint"
