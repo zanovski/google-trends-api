@@ -1,7 +1,4 @@
 'use strict';
-export function isLessThan7Days(date1, date2) {
-  return (Math.abs(date2 - date1) / (24 * 60 * 60 * 1000)) < 7;
-}
 
 export function convertDateToString(d, shouldIncludeTime) {
   let month = (d.getUTCMonth() + 1).toString();
@@ -37,12 +34,14 @@ export function formatTime(obj) {
   if (!obj.endTime) obj.endTime = new Date();
   if (!obj.startTime) obj.startTime = new Date('2004-01-01');
 
-  const shouldIncludeTime = isLessThan7Days(obj.startTime, obj.endTime);
-
-  const startTime = convertDateToString(obj.startTime,
-    shouldIncludeTime && obj.granularTimeResolution);
-  const endTime = convertDateToString(obj.endTime,
-    shouldIncludeTime && obj.granularTimeResolution);
+  const startTime = convertDateToString(
+    obj.startTime,
+    obj.granularTimeResolution
+  );
+  const endTime = convertDateToString(
+    obj.endTime,
+    obj.granularTimeResolution
+  );
 
   obj.time = `${startTime} ${endTime}`;
   return obj;
